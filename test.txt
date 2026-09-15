@@ -1,0 +1,11 @@
+1. Check the empty list (GET)
+curl -X GET http://127.0.0.1:5000/tasks
+
+2. Add a new task (POST)
+curl -X POST -H "Content-Type: application/json" -d "{\"title\": \"Review Dockerfile\"}" http://127.0.0.1:5000/tasks
+
+3. Check the list again to see your task (GET)
+curl -X GET http://127.0.0.1:5000/tasks
+
+4. Mark the task as done (PUT)
+curl -X PUT http://127.0.0.1:5000/tasks/1/done
