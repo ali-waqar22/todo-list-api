@@ -17,8 +17,8 @@ A lightweight REST API for managing tasks, built with Python (Flask) and contain
 
 ### 3. Run the container
 
-# Maps port 5000 on your local machine to port 5000 inside the container
-docker run -p 5000:5000 todo-api
+### Maps port 5000 on your local machine to port 5000 inside the container
+    docker run -p 5000:5000 todo-api
 
 The API is now accessible at 
     http://localhost:5000.
