@@ -30,7 +30,7 @@ The API is now accessible at
 | GET           | /tasks           |      Returns a list of all tasks      |
 | POST          | /tasks           |           Creates a new task          |
 | PUT           | /tasks/<id>/done | Marks a specific task status as"done" |
-| DELETE        | /tasks/<id>      |       Removes a task from memory      |
+
 
 ## 🧠 Engineering Reflection
 

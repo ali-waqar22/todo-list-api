@@ -30,7 +30,6 @@ def add_task():
 
 # Route 3: Mark a task as done
 @app.route('/tasks/<int:task_id>/done', methods=['PUT'])
-
 def mark_task(task_id):
     for task in tasks:
         if task["id"] == task_id:
