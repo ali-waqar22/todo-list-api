@@ -17,9 +17,12 @@ def add_task():
 
     data = request.get_json()
 
+    if "title" not in data or not data["title"].strip():
+        return jsonify({"error":"title is required"}), 400
+    
     new_task = {
         "id": task_id_counter,
-        "title": data.get("title","Untitled TAsk"),
+        "title": data["title"].strip(),
         "status": "pending"
     }
 

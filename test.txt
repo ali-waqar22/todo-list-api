@@ -1,11 +1,40 @@
-1. Check the empty list (GET)
+CMD
+1. Check the API health status (GET)
+curl -X GET http://127.0.0.1:5000/status
+
+2. Check the empty list (GET)
 curl -X GET http://127.0.0.1:5000/tasks
 
-2. Add a new task (POST)
+3. Add a new task (POST)
 curl -X POST -H "Content-Type: application/json" -d "{\"title\": \"Review Dockerfile\"}" http://127.0.0.1:5000/tasks
 
-3. Check the list again to see your task (GET)
-curl -X GET http://127.0.0.1:5000/tasks
+4. Get a specific task by its ID (GET)
+curl -X GET http://127.0.0.1:5000/tasks/task_id
 
-4. Mark the task as done (PUT)
-curl -X PUT http://127.0.0.1:5000/tasks/1/done
+5. Mark the task as done (PUT)
+curl -X PUT http://127.0.0.1:5000/tasks/task_id/done
+
+6. Test with an empty string:
+curl -X POST -H "Content-Type: application/json" -d "{\"title\": \"\"}" http://127.0.0.1:5000/tasks
+
+
+PS
+1. Check the API health status (GET)
+curl.exe -X GET http://127.0.0.1:5000/status
+
+2. Check the empty list (GET)
+curl.exe -X GET http://127.0.0.1:5000/tasks
+
+3. Add a new task (POST)
+curl.exe -X POST -H "Content-Type: application/json" -d "{\`"title\`": \`"Review Dockerfile\`"}" http://127.0.0.1:5000/tasks
+
+4. Get a specific task by its ID (GET)
+curl.exe -X GET http://127.0.0.1:5000/tasks/task_id
+
+5. Mark the task as done (PUT)
+curl.exe -X PUT http://127.0.0.1:5000/tasks/task_id/done
+
+6. Test with an empty string:
+curl.exe -X POST -H "Content-Type: application/json" -d "{\`"title\`": \`"\`"}" http://127.0.0.1:5000/tasks
+
+

@@ -46,4 +46,3 @@ Getting the Docker layer caching right. I made sure to copy the `requirements.tx
 
 1. Swap the in-memory list for a real database like SQLite or Redis.
 2. Make the GitHub Action push the final image to a registry like Docker Hub or AWS ECR.
-3. Add a check to the POST route to make sure users can't submit an empty task.
